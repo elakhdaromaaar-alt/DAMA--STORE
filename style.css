@@ -1753,7 +1753,7 @@ footer .logo {
 
   .hero-logo {
     font-size: 34px;
-    letter-spacing: 4px;
+    letter-spacing: 34px;
   }
 
   .hero-logo span {
@@ -1819,4 +1819,12 @@ footer .logo {
     object-fit: cover;
   }
 
+}
+/* تطبيق خط فاخر ومتناسق على أسماء المنتجات */
+.product-title, 
+.product-card h3, 
+.product-name {
+    font-family: 'Playfair Display', 'Cinzel', serif !important;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
