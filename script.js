@@ -649,7 +649,7 @@ function renderProducts() {
           return `
 
             <article
-              class="product-card dama-product-motion"
+              class="product-card"
               data-product-id="${product.id}"
               data-slot-index="${slotIndex}"
             >
@@ -865,7 +865,6 @@ function nextProducts() {
   renderProducts();
 
   applySearch();
-  requestAnimationFrame(() => initDamaScrollReveal());
 }
 
 
@@ -886,7 +885,6 @@ function previousProducts() {
   renderProducts();
 
   applySearch();
-  requestAnimationFrame(() => initDamaScrollReveal());
 }
 
 
@@ -2316,7 +2314,7 @@ applySearch();
 
 function initDamaScrollReveal() {
   const targets = document.querySelectorAll(
-    ".hero, .products-section .section-heading, .product-search, .dama-category-filters, .product-navigation, .benefits > div, .contact > *, footer"
+    ".section-heading, .product-search, .dama-category-filters, .product-navigation, .product-card, .benefits > div, .contact > *, footer"
   );
 
   if (!targets.length) return;
