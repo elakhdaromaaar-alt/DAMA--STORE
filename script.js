@@ -891,12 +891,8 @@ function previousProducts() {
 if (productsPrevButton) {
 
   productsPrevButton.addEventListener(
-    "pointerup",
-    event => {
-      event.preventDefault();
-      event.stopPropagation();
-      previousProducts();
-    }
+    "click",
+    previousProducts
   );
 }
 
@@ -904,12 +900,8 @@ if (productsPrevButton) {
 if (productsNextButton) {
 
   productsNextButton.addEventListener(
-    "pointerup",
-    event => {
-      event.preventDefault();
-      event.stopPropagation();
-      nextProducts();
-    }
+    "click",
+    nextProducts
   );
 }
 
@@ -1356,7 +1348,7 @@ function openProductDetails(
 
 
         prevButton.addEventListener(
-          "pointerup",
+          "click",
           event => {
 
             event.preventDefault();
@@ -1379,7 +1371,7 @@ function openProductDetails(
 
 
         nextButton.addEventListener(
-          "pointerup",
+          "click",
           event => {
 
             event.preventDefault();
@@ -2309,42 +2301,3 @@ renderCart();
 renderCategoryFilters();
 
 applySearch();
-
-/* ================= SCROLL REVEAL ANIMATION ================= */
-
-function initDamaScrollReveal() {
-  const targets = document.querySelectorAll(
-    ".section-heading, .product-search, .dama-category-filters, .product-navigation, .product-card, .benefits > div, .contact > *, footer"
-  );
-
-  if (!targets.length) return;
-
-  targets.forEach((element, index) => {
-    element.classList.add("dama-scroll-reveal");
-    element.style.setProperty("--dama-reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
-  });
-
-  if (!("IntersectionObserver" in window)) {
-    targets.forEach(element => element.classList.add("dama-reveal-visible"));
-    return;
-  }
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("dama-reveal-visible");
-      obs.unobserve(entry.target);
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -45px 0px"
-  });
-
-  targets.forEach(element => observer.observe(element));
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initDamaScrollReveal);
-} else {
-  initDamaScrollReveal();
-}
