@@ -1728,3 +1728,95 @@ footer .logo {
     border-radius: 50%;
     overflow: hidden;
 }
+/* =========================================
+   HERO - MOBILE FIX
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 620px;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 350px;
+    order: 1;
+  }
+
+  .hero-logo {
+    font-size: 34px;
+    letter-spacing: 4px;
+  }
+
+  .hero-logo span {
+    font-size: 14px;
+    letter-spacing: 6px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+  .hero-scroll {
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+
+  .hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    font-size: 13px;
+  }
+
+  .welcome-logo {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-circle {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome-circle strong {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  .welcome-circle > span {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+
+  .welcome-image {
+    width: 105px;
+    height: 105px;
+    margin-top: 12px;
+  }
+
+  .welcome-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
