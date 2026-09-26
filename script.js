@@ -649,7 +649,7 @@ function renderProducts() {
           return `
 
             <article
-              class="product-card"
+              class="product-card dama-product-motion"
               data-product-id="${product.id}"
               data-slot-index="${slotIndex}"
             >
@@ -865,6 +865,7 @@ function nextProducts() {
   renderProducts();
 
   applySearch();
+  requestAnimationFrame(() => initDamaScrollReveal());
 }
 
 
