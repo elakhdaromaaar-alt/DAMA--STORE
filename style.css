@@ -1718,3 +1718,13 @@ footer .logo {
     font-family: 'Tajawal', sans-serif;
     font-weight: 500;
 }
+.circle-image-container {
+    width: 600px;  /* الحجم ديال الدائرة، تقدر تنقصو أو تزيدو على حسب العبار اللي بغيتي */
+    height: 600px;
+}
+.circle-image-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
