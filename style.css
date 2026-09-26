@@ -1880,11 +1880,7 @@ footer .logo {
   border:8px solid rgba(255,255,255,.72);
   background:
     linear-gradient(145deg,rgba(255,255,255,.12),rgba(30,25,19,.16)),
-<<<<<<< HEAD
     url("images/rool1.jpeg") center/cover no-repeat;
-=======
-    url("images/montre.jpg") center/cover no-repeat;
->>>>>>> parent of d701a8d (Use a more realistic watch image and refine premium hero layout)
   box-shadow:
     0 30px 70px rgba(48,38,27,.22),
     0 0 0 1px rgba(184,139,90,.38),
@@ -2121,7 +2117,6 @@ footer .logo{
   .product-grid{gap:12px}
   .product-card{border-radius:12px}
 }
-<<<<<<< HEAD
 
 
 /* Final premium polish */
@@ -2256,5 +2251,3 @@ footer .logo{
     transition: none;
   }
 }
-=======
->>>>>>> parent of d701a8d (Use a more realistic watch image and refine premium hero layout)
